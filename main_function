@@ -1,1 +1,51 @@
+//Simple_Calculator
+//To be done : Make functions of each arithmetic calculations like
+//addition, subtraction, division, multiplication.
 
+#inclue<stdio.h>
+
+int addition (int , int);             
+int subtraction (int , int);          
+int multiplication (int , int);       
+int division_quotient (int , int);
+int division_reminder (int , int);
+
+int main()
+{
+    int a,b;             //two numbers or operands
+    char op;      //operator
+
+    //Getting two numbers.
+    printf("Enter any Two Numbers for any Arithmatic Operation : ");
+    scanf("%d%d", &a,&b);
+
+    //Getting operation to perform.
+    printf("Enter the arithematic Operation to perform (add or '+', sub or '-', multi or 'x', div or '/') : ")
+    scanf("%c", &op)
+
+    switch(op)
+    {
+        //addition
+        case '+' :
+        case 'add' :  printf("\n\t> Sum = %d\n", addition(a,b));
+        break;
+
+        //subtraction
+        case '-' :
+        case 'sub' : printf("\n\t> Difference = %d\n", subtraction(a,b)); 
+        break;
+
+        //multiplication
+        case 'x' :
+        case 'multi' : printf("\n\t> Result = %d\n", multiplication(a,b));
+        break;
+
+        //division
+        case '/' :
+        case 'div' : printf("\n\t> Quotient = %d  Reminder = %d\n", division_quotient(a,b), division_reminder(a,b));
+        break;
+
+        default : printf("\n\n\tINCORRECT OPERATION !!!\n");
+    }
+    return 0;
+}
